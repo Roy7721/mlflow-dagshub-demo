@@ -6,6 +6,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+import dagshub
+dagshub.init(repo_owner='Roy7721', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+
+mlflow.set_tracking_uri("https://dagshub.com/Roy7721/mlflow-dagshub-demo.mlflow")  # Set the MLflow tracking URI
+
 
 iris = load_iris()
 x = iris.data 
